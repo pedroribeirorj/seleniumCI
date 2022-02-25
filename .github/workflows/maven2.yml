@@ -22,5 +22,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: 
-        - mvn test -Dtest=seleniumci.main.AppTest
+      run:  mvn compile
+      
+    - name: RunMavenTest
+      uses: Maes95/maven-action@1.0.0
