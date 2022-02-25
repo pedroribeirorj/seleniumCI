@@ -1,6 +1,11 @@
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
+image: maven:latest
+
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
 name: Java CI with Maven2
 on:
   push:
@@ -10,7 +15,10 @@ on:
 
 jobs:
   build:
-    
+    stage: build
+    script:
+      - mvn compile
+
     runs-on: ubuntu-latest
 
     steps:
