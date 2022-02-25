@@ -23,4 +23,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B seleniumci.main.AppTest --file pom.xml
+      run: mvn -B seleniumci.main --seleniumci.main.AppTest pom.xml
