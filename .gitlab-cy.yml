@@ -20,4 +20,4 @@ build:
 test:
   stage: test
   script:
-    - mvn test -Dtest=com.eliasnogueira.wdm.GithubWDMPageTest
+    - mvn test -Dtest=seleniumci.main.AppTest
